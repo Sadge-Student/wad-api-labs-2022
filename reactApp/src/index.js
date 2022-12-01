@@ -6,6 +6,7 @@ import React from "react";
   import AuthProvider from "./authContext";
   import PrivateRoute from "./privateRoute";
   import AuthHeader from "./authHeader";
+  import SignUpPage from "./signUpPage";
 
   const App = () => {
     return (
@@ -33,6 +34,7 @@ import React from "react";
             <PrivateRoute path="/movies" component={Movies} />
             <PrivateRoute path="/profile" component={Profile} />
             <Redirect from="*" to="/" />
+            <Route path="/signup" component={SignUpPage} />
           </Switch>
         </AuthProvider>
       </BrowserRouter>
